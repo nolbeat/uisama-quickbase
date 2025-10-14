@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Manajemen Data - DT Global</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-database"></i>
+                    <h1>Data Management SAMA</h1>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="#perencanaan" class="nav-link active">Perencanaan & Kegiatan</a></li>
+                        <li><a href="#keuangan" class="nav-link">Keuangan & Pembayaran</a></li>
+                        <li><a href="#perjalanan" class="nav-link">Perjalanan Dinas</a></li>
+                        <li><a href="#sdm" class="nav-link">SDM & Peserta</a></li>
+                        <li><a href="#vendor" class="nav-link">Vendor & Dokumen</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Cari tabel berdasarkan nama atau deskripsi...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Perencanaan & Kegiatan -->
+        <section id="perencanaan" class="category-section">
+            <div class="category-header">
+                <i class="fas fa-calendar-alt"></i>
+                <h2>Perencanaan & Kegiatan</h2>
+            </div>
+            <div class="cards-grid">
+                <!-- Event Planning -->
+                <div class="card" data-category="perencanaan" data-name="Event Planning">
+                    <div class="card-header">
+                        <h3>Event Planning</h3>
+                        <i class="fas fa-calendar-plus card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Menginput rencana kegiatan (nama acara, lokasi, tanggal, status rencana, estimasi peserta, PIC, dukungan, dll).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/buexm5cby/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity -->
+                <div class="card" data-category="perencanaan" data-name="Activity">
+                    <div class="card-header">
+                        <h3>Activity</h3>
+                        <i class="fas fa-tasks card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Menginput aktivitas program (nama input, kategori, tanggal mulai/selesai, anggaran, status, keterkaitan ke TAP/AWP, dll).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bs4x3vfsx/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AWP Tracker -->
+                <div class="card" data-category="perencanaan" data-name="AWP Tracker">
+                    <div class="card-header">
+                        <h3>AWP Tracker</h3>
+                        <i class="fas fa-chart-line card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Menginput data output tahunan (AWP) seperti nomor output, deskripsi, alokasi anggaran, lokasi pelaksanaan, TAP, kementerian.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bt5r9s7es/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AWP Tracker (Detailed) -->
+                <div class="card" data-category="perencanaan" data-name="AWP Tracker (Detailed)">
+                    <div class="card-header">
+                        <h3>AWP Tracker (Detailed)</h3>
+                        <i class="fas fa-chart-bar card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input status dan rincian lebih detail dari output AWP, seperti status implementasi, status konfirmasi, lokasi pelaksanaan rinci.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bt4nhn554/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Outcomes -->
+                <div class="card" data-category="perencanaan" data-name="Outcomes">
+                    <div class="card-header">
+                        <h3>Outcomes</h3>
+                        <i class="fas fa-project-diagram card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Menginput struktur hierarki perencanaan program (EOPO → IO → Fokus Area → Aktivitas WP → Referensi WP).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bs4x3v8d4/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Intermediate Outcome -->
+                <div class="card" data-category="perencanaan" data-name="Intermediate Outcome">
+                    <div class="card-header">
+                        <h3>Intermediate Outcome</h3>
+                        <i class="fas fa-sitemap card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Bagian dari struktur hierarki perencanaan program.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bs4x3xpee/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WP Focus Area -->
+                <div class="card" data-category="perencanaan" data-name="WP Focus Area">
+                    <div class="card-header">
+                        <h3>WP Focus Area</h3>
+                        <i class="fas fa-bullseye card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Bagian dari struktur hierarki perencanaan program.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/btguyqymc/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WP Activity Name -->
+                <div class="card" data-category="perencanaan" data-name="WP Activity Name">
+                    <div class="card-header">
+                        <h3>WP Activity Name</h3>
+                        <i class="fas fa-list-alt card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Bagian dari struktur hierarki perencanaan program.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/btguzk94y/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- WP Reference -->
+                <div class="card" data-category="perencanaan" data-name="WP Reference">
+                    <div class="card-header">
+                        <h3>WP Reference</h3>
+                        <i class="fas fa-bookmark card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Bagian dari struktur hierarki perencanaan program.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/btgux2cyr/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keuangan & Pembayaran -->
+        <section id="keuangan" class="category-section">
+            <div class="category-header">
+                <i class="fas fa-money-bill-wave"></i>
+                <h2>Keuangan & Pembayaran</h2>
+            </div>
+            <div class="cards-grid">
+                <!-- Financial Expenditure -->
+                <div class="card" data-category="keuangan" data-name="Financial Expenditure">
+                    <div class="card-header">
+                        <h3>Financial Expenditure</h3>
+                        <i class="fas fa-receipt card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input detail pengeluaran (tanggal, kegiatan, pemegang anggaran, jumlah, kontribusi GEDSI/MERL/SP, dll).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/buqkpr7kc/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Payment Request -->
+                <div class="card" data-category="keuangan" data-name="Payment Request">
+                    <div class="card-header">
+                        <h3>Payment Request</h3>
+                        <i class="fas fa-file-invoice-dollar card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input permintaan pembayaran vendor/job order, termasuk invoice, status permintaan, jumlah pembayaran.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bvdihxttb/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Payment Detail -->
+                <div class="card" data-category="keuangan" data-name="Payment Detail">
+                    <div class="card-header">
+                        <h3>Payment Detail</h3>
+                        <i class="fas fa-money-check card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input rincian pembayaran yang telah disetujui (terkait Payment Request, Budget Holder, wilayah, jumlah).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bvfmd9y73/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perjalanan Dinas & Logistik -->
+        <section id="perjalanan" class="category-section">
+            <div class="category-header">
+                <i class="fas fa-plane"></i>
+                <h2>Perjalanan Dinas & Logistik</h2>
+            </div>
+            <div class="cards-grid">
+                <!-- Travel Request -->
+                <div class="card" data-category="perjalanan" data-name="Travel Request">
+                    <div class="card-header">
+                        <h3>Travel Request</h3>
+                        <i class="fas fa-suitcase card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input pengajuan perjalanan (tujuan, tanggal, alasan, checklist persetujuan, status perjalanan).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/buj7gumea/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Departure -->
+                <div class="card" data-category="perjalanan" data-name="Departure">
+                    <div class="card-header">
+                        <h3>Departure</h3>
+                        <i class="fas fa-plane-departure card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input rincian keberangkatan & kedatangan (lokasi, tanggal, waktu, moda transportasi, estimasi biaya).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bukfcimh6/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Accomodation -->
+                <div class="card" data-category="perjalanan" data-name="Accomodation">
+                    <div class="card-header">
+                        <h3>Accomodation</h3>
+                        <i class="fas fa-hotel card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input data penginapan (nama hotel, tanggal check-in/out, biaya, alamat).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bukfd42qu/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Transport -->
+                <div class="card" data-category="perjalanan" data-name="Transport">
+                    <div class="card-header">
+                        <h3>Transport</h3>
+                        <i class="fas fa-bus card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input kebutuhan transportasi (jenis transportasi, asal-tujuan, durasi, estimasi biaya).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bukfe79wa/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Acquittal Detail -->
+                <div class="card" data-category="perjalanan" data-name="Acquittal Detail">
+                    <div class="card-header">
+                        <h3>Acquittal Detail</h3>
+                        <i class="fas fa-file-invoice card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input laporan dan bukti realisasi biaya perjalanan setelah perjalanan selesai.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bupbk8a8w/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Acquittal Variation -->
+                <div class="card" data-category="perjalanan" data-name="Acquittal Variation">
+                    <div class="card-header">
+                        <h3>Acquittal Variation</h3>
+                        <i class="fas fa-exchange-alt card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input laporan dan bukti realisasi biaya perjalanan setelah perjalanan selesai.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bupbk9paa/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Acquittal Diary -->
+                <div class="card" data-category="perjalanan" data-name="Acquittal Diary">
+                    <div class="card-header">
+                        <h3>Acquittal Diary</h3>
+                        <i class="fas fa-book card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input laporan dan bukti realisasi biaya perjalanan setelah perjalanan selesai.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bupbzmazp/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SDM & Peserta -->
+        <section id="sdm" class="category-section">
+            <div class="category-header">
+                <i class="fas fa-users"></i>
+                <h2>SDM & Peserta</h2>
+            </div>
+            <div class="cards-grid">
+                <!-- Personnel -->
+                <div class="card" data-category="sdm" data-name="Personnel">
+                    <div class="card-header">
+                        <h3>Personnel</h3>
+                        <i class="fas fa-user-tie card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input data pegawai/staf SKALA (biodata, kontak, posisi, relasi ke wilayah/divisi).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/buke88ta9/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Participants -->
+                <div class="card" data-category="sdm" data-name="Participants">
+                    <div class="card-header">
+                        <h3>Participants</h3>
+                        <i class="fas fa-user-friends card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input data peserta kegiatan (nama, gender, institusi, kebutuhan khusus, kontak).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bs4yb6dmi/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Institutions -->
+                <div class="card" data-category="sdm" data-name="Institutions">
+                    <div class="card-header">
+                        <h3>Institutions</h3>
+                        <i class="fas fa-university card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input data lembaga peserta (nama lembaga, tipe institusi, sektor).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bs4ycbaa7/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event Participant -->
+                <div class="card" data-category="sdm" data-name="Event Participant">
+                    <div class="card-header">
+                        <h3>Event Participant</h3>
+                        <i class="fas fa-user-check card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input daftar kehadiran peserta pada kegiatan tertentu (gender, disabilitas, NPWP, peran, dll).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bs4yehni2/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vendor, Job Order & Dokumen -->
+        <section id="vendor" class="category-section">
+            <div class="category-header">
+                <i class="fas fa-file-contract"></i>
+                <h2>Vendor, Job Order & Dokumen</h2>
+            </div>
+            <div class="cards-grid">
+                <!-- Vendors -->
+                <div class="card" data-category="vendor" data-name="Vendors">
+                    <div class="card-header">
+                        <h3>Vendors</h3>
+                        <i class="fas fa-handshake card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input data vendor (identitas hukum, alamat, rekening bank, status vendor).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bvee2gd6r/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Job Order -->
+                <div class="card" data-category="vendor" data-name="Job Order">
+                    <div class="card-header">
+                        <h3>Job Order</h3>
+                        <i class="fas fa-clipboard-list card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input order pekerjaan/jasa terkait kegiatan (nomor JO, status, kategori, total biaya).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bveefnuhf/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Job Milestone/Detail -->
+                <div class="card" data-category="vendor" data-name="Job Milestone/Detail">
+                    <div class="card-header">
+                        <h3>Job Milestone/Detail</h3>
+                        <i class="fas fa-tasks card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input rincian milestone JO (uraian, kuantitas, harga satuan, total).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bvevw79fy/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Documents -->
+                <div class="card" data-category="vendor" data-name="Documents">
+                    <div class="card-header">
+                        <h3>Documents</h3>
+                        <i class="fas fa-file-upload card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Upload dokumen pendukung kegiatan, keuangan, dan administrasi.</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bs5pn87yp/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- EF Templates -->
+                <div class="card" data-category="vendor" data-name="EF Templates">
+                    <div class="card-header">
+                        <h3>EF Templates</h3>
+                        <i class="fas fa-file-alt card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input & kelola template dokumen otomatis (Word/Excel Fusion).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bs649ypku/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- EF Tabs -->
+                <div class="card" data-category="vendor" data-name="EF Tabs">
+                    <div class="card-header">
+                        <h3>EF Tabs</h3>
+                        <i class="fas fa-folder card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">Input & kelola template dokumen otomatis (Word/Excel Fusion).</p>
+                        <a href="https://dt-global.quickbase.com/nav/app/bs4x3ubbx/table/bs65acik7/action/td" class="card-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Akses Tabel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-database"></i>
+                    <span>Data Management SAMA</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Bantuan</a>
+                    <a href="#">Kontak</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 | DT Global-SKALA | MERL & Performance. Hak Cipta Dilindungi.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
